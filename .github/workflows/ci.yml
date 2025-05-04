@@ -35,7 +35,7 @@ jobs:
           source: "dist.tar.gz"
           target: "/tmp"
       - name: Extract dist archive on server
-        uses: appleboy/scp-action@v0.1.10
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
