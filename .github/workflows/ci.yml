@@ -23,3 +23,12 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Copy files to remote server
+        uses: appleboy/scp-action@v0.1.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "dist/*"
+          target: "/var/www/html"
