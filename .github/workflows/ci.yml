@@ -25,6 +25,11 @@ jobs:
         run: npm run build
       - name: Compress dist folder
         run: tar -czf dist.tar.gz dist
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-tar
+          path: dist.tar.gz
 
   deploy:
     needs: build
