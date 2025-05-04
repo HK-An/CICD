@@ -47,7 +47,10 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: rm -f /tmp/dist.tar.gz
+          script: |
+            if [ -e /tmp/dist.tar.gz ]; then
+              rm -rf /tmp/dist.tar.gz
+            fi
 
       - name: Upload dist archive to server
         uses: appleboy/scp-action@v0.1.3
