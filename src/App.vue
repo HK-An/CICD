@@ -1,30 +1,31 @@
 <script setup>
+import BankAccount from './components/bank-account/BankAccount.vue';
+import Contact from './components/contact/Contact.vue';
+import Gallery from './components/gallery/Gallery.vue';
+import Video from './components/gallery/Video.vue';
 import HelloWorld from './components/HelloWorld.vue'
+import Letter from './components/Letter.vue';
+import Location from './components/location/Location.vue';
+import MessageBoard from './components/message-board/MessageBoard.vue';
+import Start from './components/start.vue';
+
+const varNameOfBride = "김은채";
+const varNameOfGroom = "이준서";
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
+  <!-- show modal first for selecting language -->
   <HelloWorld msg="Welcome to ND's happy world!" />
+  <Start :nameOfBride="varNameOfBride" :nameOfGroom="varNameOfGroom" dateTime="2099.99.99 SAT PM12:30" vanue="빌라드지디 서울 ㅇㅇ홀"/>
+  <Letter />
+  <Contact />
+  <Gallery />
+  <Video />
+  <Location />
+  <BankAccount />
+  <MessageBoard />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
