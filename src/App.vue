@@ -7,7 +7,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Letter from './components/Letter.vue';
 import Location from './components/location/Location.vue';
 import MessageBoard from './components/message-board/MessageBoard.vue';
-import Start from './components/start.vue';
+import Start from './components/Start.vue';
 
 const varNameOfBride = "김은채";
 const varNameOfGroom = "이준서";
